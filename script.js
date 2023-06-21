@@ -1,3 +1,5 @@
+// Axel Cotón Gutiérrez Copyright 2023
+
 document.addEventListener('DOMContentLoaded', function() {
   const numbers = document.querySelectorAll('.number');
   const startButton = document.getElementById('start-button');
