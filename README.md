@@ -1,4 +1,4 @@
-# Contarhasta3dados
+# Contar hasta 3 usando la recta numérica
 
 ![Juego](https://axelcotongutierrez.github.io/learningmathematicas/assets/images//posts/Contar3/jcontar3rm.jpg)
 
