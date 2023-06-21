@@ -2,6 +2,8 @@
 
 ![Juego de la recta numérica](/jcontar3rm.jpg)
 
+Dentro del blog: https://axelcotongutierrez.github.io/learningmathematicas/
+
 Juego para Infantil para aprender a contar hasta tres usando la recta numérica.
 
 Puedes probar el juego en esta url:
