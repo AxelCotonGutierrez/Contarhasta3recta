@@ -1,7 +1,5 @@
 # Contar hasta 3 usando la recta numérica
 
-<img src="https://axelcotongutierrez.github.io/learningmathematicas/assets/images//posts/Contar3/jcontar3rm.jpg"/>
-
 ![Juego](https://axelcotongutierrez.github.io/learningmathematicas/assets/images//posts/Contar3/jcontar3rm.jpg)
 
 Juego para Infantil para aprender a contar hasta tres usando la recta numérica.
