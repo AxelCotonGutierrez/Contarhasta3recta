@@ -67,6 +67,16 @@ h1 {
   padding-left: 0.5em;
 }
 
+
+.pregunta2 {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
 .msj {
   font-size: 15px;
   height: 15px;
