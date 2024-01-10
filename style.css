@@ -70,7 +70,7 @@ h1 {
 
 .pregunta2 {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   justify-content: center;
   align-items: center;
   padding-right: 0.5em;
@@ -176,6 +176,9 @@ h1 {
   
 .pregunta {
     font-size: 30px;
+}
+.pregunta2 {
+  font-size: 25px;
 }
 .number-line {
   width: 225px; 
