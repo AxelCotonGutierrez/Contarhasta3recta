@@ -20,14 +20,13 @@ function playAudio(audioElement) {
 // Evento clic para el icono del megáfono para reproducir la pregunta en audio
 megaphoneIcon.addEventListener('click', () => playAudio(preguntaAudio));
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   const numbers = document.querySelectorAll('.number');
   const startButton = document.getElementById('start-button');
   const questionElement = document.getElementById('question');
   const resultElement = document.getElementById('result');
   const playAgainButton = document.getElementById('play-again-button');
+  const scoreElement = document.getElementById('score'); // Asegúrate de que este elemento exista en tu HTML
 
   let randomNumber;
   let previousRandomNumber;
@@ -41,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
       number.classList.remove('selected');
     });
     resultElement.innerHTML = '';
+    scoreElement.textContent = ''; // Actualizar el texto de scoreElement
     score = 0;
     questionsCount = 0;
     isGameRunning = false;
@@ -65,43 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (selectedNumber === randomNumber) {
       this.classList.add('selected');
-      resultElement.innerHTML = `
-        <div class="message-container">
-          <span class="msj correcto">¡Correcto!</span>
-        </div>
-      `;
+      resultElement.innerHTML = '<div class="message-container"><span class="msj correcto">¡Correcto!</span></div>';
       playAudio(correctoAudio);
       score++;
     } else {
       this.classList.add('selected');
-      resultElement.innerHTML = `
-        <div class="message-container">
-          <span class="msj incorrecto">Incorrecto</span>
-        </div>
-      `;
+      resultElement.innerHTML = '<div class="message-container"><span class="msj incorrecto">Incorrecto</span></div>';
       playAudio(incorrectoAudio);
     }
 
     questionsCount++;
 
     if (questionsCount === 5) {
-      // Mensaje de finalización del juego
       questionElement.textContent = `¡Juego completado! Preguntas acertadas: ${score} de ${questionsCount}.`;
-    
-      // Reproduce un audio basado en el puntaje
+
       if (score === 5) {
-        // Reproduce el audio de felicitaciones
         playAudio(felicidadesAudio);
       } else {
-        // Reproduce el audio de intentar de nuevo
         playAudio(intentarAudio);
       }
-    
-      // Marca el juego como terminado y muestra el botón para jugar de nuevo
+
       isGameRunning = false;
       playAgainButton.style.display = 'block';
     } else {
-      // Si el juego no ha terminado, prepara la siguiente pregunta
       setTimeout(() => {
         resultElement.innerHTML = '';
         generateQuestion();
@@ -140,10 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
   startButton.addEventListener('click', handleStart);
   playAgainButton.addEventListener('click', handlePlayAgain);
 
-  // Mostrar el botón "Comenzar" al cargar la página
   resetGame();
   startButton.style.display = 'block';
 });
+
+
 
  // Navegaciòn"  
  
