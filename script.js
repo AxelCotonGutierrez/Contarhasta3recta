@@ -87,12 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (questionsCount === 5) {
       questionElement.textContent = `¡Juego completado! Preguntas acertadas: ${score} de ${questionsCount}.`;
       if (score === 5) {
-        scoreElement.textContent += ` \u00A1Felicidades, lo has conseguido!`;
-        scoreElement.style.color = "green";
         playAudio(felicidadesAudio);
       } else {
-        scoreElement.textContent += ` \u00A1Vuelve a intentarlo!`;
-        scoreElement.style.color = "red";
         playAudio(intentarAudio);
       }
       isGameRunning = false;
