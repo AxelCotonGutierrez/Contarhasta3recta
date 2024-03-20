@@ -1,4 +1,26 @@
 // Axel Cotón Gutiérrez Copyright 2023
+// Cargar archivos de audio desde la carpeta adecuada
+const preguntaAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Pregunta.mp3');
+const correctoAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Correcto.mp3');
+const incorrectoAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Incorrecto.mp3');
+const felicidadesAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Felicidades.mp3');
+const intentarAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Intentar.mp3');
+
+// Acceder al botón de silencio y al icono del megáfono en el DOM
+const soundControl = document.querySelector('#sound-control');
+const megaphoneIcon = document.querySelector('#megaphone-icon');
+
+// Función para reproducir audio si el sonido está activado
+function playAudio(audioElement) {
+  if (soundControl.checked) {
+    audioElement.play();
+  }
+}
+
+// Evento clic para el icono del megáfono para reproducir la pregunta en audio
+megaphoneIcon.addEventListener('click', () => playAudio(preguntaAudio));
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const numbers = document.querySelectorAll('.number');
@@ -48,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="msj correcto">¡Correcto!</span>
         </div>
       `;
+      playAudio(correctoAudio);
       score++;
     } else {
       this.classList.add('selected');
@@ -56,12 +79,22 @@ document.addEventListener('DOMContentLoaded', function() {
           <span class="msj incorrecto">Incorrecto</span>
         </div>
       `;
+      playAudio(incorrectoAudio);
     }
 
     questionsCount++;
 
     if (questionsCount === 5) {
       questionElement.textContent = `¡Juego completado! Preguntas acertadas: ${score} de ${questionsCount}.`;
+      if (score === 5) {
+        scoreElement.textContent += ` \u00A1Felicidades, lo has conseguido!`;
+        scoreElement.style.color = "green";
+        playAudio(felicidadesAudio);
+      } else {
+        scoreElement.textContent += ` \u00A1Vuelve a intentarlo!`;
+        scoreElement.style.color = "red";
+        playAudio(intentarAudio);
+      }
       isGameRunning = false;
       playAgainButton.style.display = 'block';
     } else {
