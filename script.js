@@ -85,15 +85,23 @@ document.addEventListener('DOMContentLoaded', function() {
     questionsCount++;
 
     if (questionsCount === 5) {
+      // Mensaje de finalización del juego
       questionElement.textContent = `¡Juego completado! Preguntas acertadas: ${score} de ${questionsCount}.`;
+    
+      // Reproduce un audio basado en el puntaje
       if (score === 5) {
+        // Reproduce el audio de felicitaciones
         playAudio(felicidadesAudio);
       } else {
+        // Reproduce el audio de intentar de nuevo
         playAudio(intentarAudio);
       }
+    
+      // Marca el juego como terminado y muestra el botón para jugar de nuevo
       isGameRunning = false;
       playAgainButton.style.display = 'block';
     } else {
+      // Si el juego no ha terminado, prepara la siguiente pregunta
       setTimeout(() => {
         resultElement.innerHTML = '';
         generateQuestion();
