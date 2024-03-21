@@ -10,6 +10,12 @@ Puedes probar el juego en esta url:
 
 https://axelcotongutierrez.github.io/Contarhasta3recta/
 
+Para saber cómo se juega:
+
+https://youtu.be/wOAo04Zj8lw?si=klnOYxiW70LAATTX
+
+
+
 ¡Bienvenidos al emocionante juego de la Recta Numérica Aventurera!
 
 ¿Alguna vez te has preguntado cómo encontrar rápidamente un número en una secuencia infinita? ¡No te preocupes! Hoy te invitamos a embarcarte en una aventura educativa donde aprenderás a usar la mágica herramienta llamada Recta Numérica.
