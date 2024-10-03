@@ -1,4 +1,5 @@
 // Axel Cotón Gutiérrez Copyright 2023
+
 // Cargar archivos de audio desde la carpeta adecuada
 const preguntaAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Pregunta.mp3');
 const correctoAudio = new Audio('https://raw.githubusercontent.com/AxelCotonGutierrez/Contarhasta3recta/master/audio/Correcto.mp3');
@@ -85,6 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
         playAudio(intentarAudio);
       }
 
+      // Incrementar el contador en Firebase al completar el juego
+      incrementarContadorFirebase("Infantil/Matemáticas/Contar/3", "3recta");
+
       isGameRunning = false;
       playAgainButton.style.display = 'block';
     } else {
@@ -128,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   resetGame();
   startButton.style.display = 'block';
+
+  // Mostrar el contador al cargar la página usando el script externo
+  mostrarContador("Infantil/Matemáticas/Contar/3", "3recta");
 });
-
-
-
