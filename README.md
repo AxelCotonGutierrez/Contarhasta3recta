@@ -4,6 +4,8 @@
 
 Dentro del blog: https://axelcotongutierrez.github.io/learningmathematicas/
 
+Vídeo Explicativo del código: https://www.youtube.com/watch?v=FHDq5PUqSXg
+
 Juego para Infantil para aprender a contar hasta tres usando la recta numérica.
 
 Puedes probar el juego en esta url:
